@@ -100,7 +100,8 @@ class App:
             outputPath = os.path.join(outputDir, outputFile)
                     
         elif not extension and len(filename) == 2 and filename.isdigit(): # folder/00
-            outputFile = outputDir + '.' + 'nsp'
+            folderName = os.path.basename(os.path.dirname(inputFile))
+            outputFile = folderName + '.' + 'nsp'
             outputPath = os.path.join(outputDir, outputFile)
                 
         if outputPath:
